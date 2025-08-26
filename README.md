@@ -7,7 +7,7 @@ O projeto contém:
 - Leitura de texto por voz
 
 ## Como visualizar
-Basta abrir o arquivo `index.html` em qualquer navegador.
+Basta abrir o arquivo index.html em qualquer navegador.
 
 ## Tecnologias usadas
 - HTML5
