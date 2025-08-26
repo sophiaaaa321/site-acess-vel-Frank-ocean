@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frank Ocean — Site Completo</title>
+  <style>
+    :root {
+      --green-light: #a7f3d0;
+      --green-dark: #065f46;
+      --white: #ffffff;
+      --black: #000000;
+      --orange: #f97316;
+      --blonde: #e5e5e5;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--black);
+      line-height: 1.6;
+      font-size: 1rem;
+      background: linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65));
+    }
+
+    header, main, footer {
+      background-color: rgba(255, 255, 255, 0.85);
+    }
+
+    header {
+      background: rgba(167, 243, 208, 0.9);
+      color: var(--black);
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 1rem;
+    }
+
+    section {
+      margin: 2rem 0;
+      padding: 1rem;
+      border-left: 6px solid var(--green-dark);
+      background: var(--green-light);
+      border-radius: 0.5rem;
+    }
+
+    section h2 { margin-top: 0; }
+
+    .img-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1rem 0; }
+    .img-gallery img { max-width: 100%; height: auto; border: 2px solid var(--black); border-radius: 0.5rem; }
+
+    .album-card { border: 2px solid var(--black); border-radius: 0.5rem; padding: 1rem; margin: 1rem 0; }
+    .channel-orange { background: var(--orange); color: var(--white); }
+    .blonde { background: var(--blonde); color: var(--black); }
+
+    footer { background: var(--black); color: var(--white); text-align: center; padding: 1rem; margin-top: 2rem; }
+    .controls { display: flex; justify-content: center; gap: 1rem; margin: 1rem 0; flex-wrap: wrap; }
+    .controls button { padding: 0.5rem 1rem; border: none; border-radius: 0.5rem; cursor: pointer; font-weight: bold; background: var(--green-dark); color: var(--white); }
+    .controls button:hover { background: var(--black); }
+    body.high-contrast { background: var(--black); color: var(--white); }
+    body.high-contrast header, body.high-contrast section { background: var(--black); color: var(--white); border-color: var(--white); }
+
+    @media (max-width: 600px) { header h1 { font-size: 1.6rem; } body { font-size: 0.95rem; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Frank Ocean</h1>
+  </header>
+
+  <div class="controls">
+    <button onclick="alterarFonte(1)">Aumentar Fonte</button>
+    <button onclick="alterarFonte(-1)">Diminuir Fonte</button>
+    <button onclick="alternarContraste()">Alto Contraste</button>
+    <button onclick="lerTexto()">▶ Ler Conteúdo</button>
+    <button onclick="pausarTexto()">⏸ Pausar</button>
+    <button onclick="continuarTexto()">⏵ Continuar</button>
+    <button onclick="pararTexto()">⏹ Parar</button>
+  </div>
+
+  <main id="conteudo">
+    <section id="biografia">
+      <h2>Biografia</h2>
+      <p>Frank Ocean (Christopher Edwin Breaux) nasceu em 1987, na Califórnia. É cantor, compositor e produtor musical. Ficou conhecido por seu estilo inovador, mesclando R&B, soul, pop e música experimental. Sua trajetória começou com a mixtape <em>Nostalgia, Ultra</em> (2011), seguida pelos álbuns <em>channel ORANGE</em> (2012) e <em>Blonde</em> (2016), considerados marcos da música contemporânea.</p>
+    </section>
+
+    <section id="discografia">
+      <h2>Discografia</h2>
+      <article class="album-card channel-orange">
+        <h3>channel ORANGE (2012)</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/en/2/28/Channel_ORANGE.jpg" alt="Capa do álbum channel ORANGE">
+        <p>Álbum vencedor do Grammy, com faixas como “Thinkin Bout You”, “Pyramids” e “Bad Religion”.</p>
+      </article>
+      <article class="album-card blonde">
+        <h3>Blonde (2016)</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/en/a/a0/Blonde_-_Frank_Ocean.jpeg" alt="Capa do álbum Blonde">
+        <p>Obra experimental e intimista, com músicas como “Nikes”, “Ivy” e “Nights”.</p>
+      </article>
+    </section>
+
+    <section id="premios">
+      <h2>Prêmios</h2>
+      <ul>
+        <li>Grammy Awards 2013: Melhor Álbum de Música Urbana Contemporânea (<em>channel ORANGE</em>) e Melhor Colaboração Rap/Sung por “No Church in the Wild”.</li>
+        <li>BRIT Awards: Indicado como Artista Solo Internacional Masculino.</li>
+        <li>GQ Men of the Year Awards: Reconhecido como Artista Internacional do Ano.</li>
+      </ul>
+    </section>
+
+    <section id="galeria">
+      <h2>Galeria de Fotos</h2>
+      <div class="img-gallery">
+        <img src="https://upload.wikimedia.org/wikipedia/en/2/28/Channel_ORANGE.jpg" alt="Capa do álbum channel ORANGE">
+        <img src="https://upload.wikimedia.org/wikipedia/en/a/a0/Blonde_-_Frank_Ocean.jpeg" alt="Capa do álbum Blonde">
+        <img src="https://upload.wikimedia.org/wikipedia/pt/6/61/FrankOceanNovacane.jpg" alt="Capa do álbum Novacane">
+      </div>
+    </section>
+
+    <section id="curiosidades">
+      <h2>Curiosidades</h2>
+      <ul>
+        <li>Frank Ocean escreveu músicas para artistas famosos como Beyoncé e Justin Bieber antes de se lançar como cantor solo.</li>
+        <li>Seu nome verdadeiro é Christopher Edwin Breaux; ele adotou o nome artístico "Frank Ocean" inspirado em Frank Sinatra e no oceano Atlântico.</li>
+        <li>Ele é conhecido por manter sua vida pessoal muito reservada, raramente concedendo entrevistas.</li>
+        <li>O álbum <em>Blonde</em> foi lançado de surpresa, sem aviso prévio, em 2016.</li>
+        <li>Frank Ocean é fluente em francês e já morou na França por um período, influenciando sua música e estilo.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Site completo sobre Frank Ocean com fotos, álbuns, prêmios, curiosidades e recursos de acessibilidade.</p>
+  </footer>
+
+  <script>
+    let utterance;
+    function lerTexto(){
+      if(speechSynthesis.speaking) speechSynthesis.cancel();
+      const texto = document.getElementById('conteudo').innerText;
+      utterance = new SpeechSynthesisUtterance(texto);
+      utterance.lang = 'pt-BR';
+      const voices = speechSynthesis.getVoices();
+      const femaleVoice = voices.find(v => v.lang.startsWith('pt') && v.name.toLowerCase().includes('female')) || voices.find(v => v.lang.startsWith('pt'));
+      if(femaleVoice) utterance.voice = femaleVoice;
+      speechSynthesis.speak(utterance);
+    }
+    function pausarTexto(){ if(speechSynthesis.speaking && !speechSynthesis.paused) speechSynthesis.pause(); }
+    function continuarTexto(){ if(speechSynthesis.paused) speechSynthesis.resume(); }
+    function pararTexto(){ if(speechSynthesis.speaking || speechSynthesis.paused) speechSynthesis.cancel(); }
+    function alterarFonte(delta){ const body=document.body; let style=window.getComputedStyle(body).getPropertyValue('font-size'); let currentSize=parseFloat(style); body.style.fontSize=(currentSize+delta)+'px'; }
+    function alternarContraste(){ document.body.classList.toggle('high-contrast'); }
+  </script>
+</body>
+</html>
